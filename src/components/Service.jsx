@@ -26,37 +26,37 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="services-section bg-gradient-to-b from-gray-950 via-indigo-950/70 to-gray-900 min-h-screen py-20 lg:py-32">
+    <section className="services-section bg-gray-50 min-h-screen py-20 lg:py-32">
       <div className="services-container max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
 
-        {/* Left side - Hero Quote (kept dramatic but slightly softer overlay) */}
-        <div className="lg:col-span-6 relative overflow-hidden rounded-3xl shadow-2xl lg:shadow-2xl">
+        {/* Left side - Hero Quote / Visual Statement */}
+        <div className="lg:col-span-6 relative overflow-hidden rounded-3xl shadow-xl">
 
-          {/* Background with softer gradient overlay for better readability */}
+          {/* Background image with very light overlay */}
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage: `url('https://images.unsplash.com/photo-1557682268-e3955ed5d83f?auto=format&fit=crop&q=90&w=2400')`,
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-950/80 via-purple-950/75 to-violet-950/70" />
+            <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-gray-50/60 to-white/40" />
           </div>
 
-          {/* Content - white text with indigo/purple accents */}
-          <div className="relative z-10 p-10 lg:p-16 flex flex-col h-full justify-center text-white">
-            <div className="absolute -left-10 -top-12 text-[14rem] lg:text-[18rem] font-black text-indigo-400/5 select-none pointer-events-none hidden lg:block tracking-tighter leading-none">
+          {/* Content */}
+          <div className="relative z-10 p-10 lg:p-16 flex flex-col h-full justify-center text-gray-900">
+            <div className="absolute -left-8 -top-10 text-[10rem] lg:text-[14rem] font-black text-indigo-100 select-none pointer-events-none hidden lg:block tracking-tighter leading-none">
               01
             </div>
 
             <blockquote className="relative">
-              <p className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight drop-shadow-xl">
+              <p className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
                 “Your brand deserves more than just posts.<br className="hidden sm:block" />
                 It deserves{" "}
-                <span className="bg-gradient-to-r from-indigo-300 via-purple-300 to-violet-300 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-indigo-600 via-indigo-500 to-violet-600 bg-clip-text text-transparent">
                   strategy.
                 </span>”
               </p>
-              <footer className="mt-8 text-2xl font-medium opacity-90 tracking-wide">
+              <footer className="mt-8 text-2xl font-medium text-gray-600 tracking-wide">
                 — Amaya Marketing Team
               </footer>
             </blockquote>
@@ -65,39 +65,36 @@ export default function Services() {
               <button
                 className="
                   group relative inline-flex items-center gap-3 px-10 py-6
-                  bg-gradient-to-r from-indigo-600 via-indigo-500 to-purple-600
-                  hover:from-indigo-700 hover:via-indigo-600 hover:to-purple-700
+                  bg-indigo-600 hover:bg-indigo-700
                   text-white font-semibold text-xl rounded-2xl
-                  shadow-xl hover:shadow-indigo-600/40
+                  shadow-lg hover:shadow-xl hover:shadow-indigo-300/30
                   transform hover:-translate-y-1 transition-all duration-300
-                  overflow-hidden
                 "
               >
-                <span className="relative z-10 flex items-center gap-3">
+                <span className="flex items-center gap-3">
                   Start Growing Today
                   <svg className="w-7 h-7 group-hover:rotate-12 group-hover:scale-110 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-700 to-purple-700 opacity-0 group-hover:opacity-30 transition-opacity" />
               </button>
             </div>
           </div>
         </div>
 
-        {/* Right side - Cards area with intro heading */}
+        {/* Right side - Services intro + cards */}
         <div className="lg:col-span-6 space-y-10 lg:space-y-12">
-          {/* Added intro div above cards - styled consistently */}
+          {/* Intro heading */}
           <div className="text-center lg:text-left">
-            <h3 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-              We Provide <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Results-Driven</span> Services
+            <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
+              We Provide <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Results-Driven</span> Services
             </h3>
-            <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0">
+            <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0">
               From strategy to execution — everything your brand needs to dominate social media in 2026 and beyond.
             </p>
           </div>
 
-          {/* Cards grid - light background for contrast, indigo accents */}
+          {/* Cards grid */}
           <div className="services-grid grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
             {services.map((service, index) => (
               <ServiceCard
