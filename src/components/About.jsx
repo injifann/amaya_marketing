@@ -51,7 +51,7 @@ export default function About() {
             </h2>
             <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
               Ebba Digital founded Amaya Marketing with a clear mission: to bring world-class social media strategy 
-              and execution to businesses in Ethiopia and beyond. With over [X] years of experience in digital marketing, 
+              and execution to businesses in Ethiopia and beyond. With over 1 years of experience in digital marketing, 
               brand building, and performance advertising, he has helped dozens of brands grow their online presence 
               and achieve measurable ROI.
             </p>

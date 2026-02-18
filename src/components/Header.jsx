@@ -1,9 +1,10 @@
 import amayaLogo from '../assets/amaya_logo.jpg';
+import {Link } from 'react-router-dom';
 
 export default function Header() {
   return (
     <header className="
-      w-full bg-white 
+      w-full bg-white
       border-b border-gray-200 
       shadow-sm sticky top-0 z-50 transition-all duration-300
     ">
@@ -12,14 +13,14 @@ export default function Header() {
 
           {/* Logo + Tagline */}
           <div className="flex-shrink-0 relative z-10">
+            <Link to="/">
             <a 
-              href="/" 
               className="group flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 transition-all duration-400"
             >
-              {/* Logo with subtle glow (light theme friendly) */}
+              {/* Logo with subtle glow  */}
               <div className="relative">
                 <div className="
-                  absolute inset-0 rounded-full 
+                  absolute inset-0 rounded-1xl 
                   bg-gradient-to-br from-indigo-400/10 via-purple-400/5 to-transparent
                   blur-lg scale-110 
                   group-hover:scale-125 group-hover:blur-xl 
@@ -30,8 +31,7 @@ export default function Header() {
                   src={amayaLogo}
                   alt="Amaya Logo"
                   className="
-                    relative h-12 w-auto sm:h-16 lg:h-20 object-contain rounded-2xl 
-                    shadow-md transition-all duration-500 
+                    relative h-12 w-auto sm:h-16 lg:h-20 object-contain rounded-1xl 
                     group-hover:scale-105 group-hover:rotate-[2deg] 
                     group-hover:shadow-lg group-hover:shadow-indigo-200/40
                   "
@@ -49,42 +49,43 @@ export default function Header() {
                 </span>
                 <span className="
                   text-xs sm:text-sm lg:text-base font-medium tracking-[0.25em] 
-                  text-gray-500 uppercase mt-1.5
+                  text-blue-700 uppercase mt-1.5
                 ">
-                  Growth Through Clarity
-                </span>
+                 for Accelerated Growth    
+                 </span>
               </div>
             </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1.5 lg:gap-3">
             {[
-              { label: 'Home', href: '#home' },
-              { label: 'Services', href: '#services' },
-              { label: 'Work', href: '#work' },
-              { label: 'Why Us', href: '#why-amaya' },
-              { label: 'About', href: '#about' },
-              { label: 'Insights', href: '#blog' },
+              { label: 'Home', href: '' },
+              { label: 'Services', href: 'services' },
+              { label: 'Work', href: 'work' },
+              { label: 'Why Us', href: 'why-us' },
+              { label: 'About', href: 'about' },
+              { label: 'Insights', href: 'blog' },
               { 
                 label: 'Let’s Talk', 
-                href: '#contact',
+                href: 'contact',
                 isCta: true 
               },
             ].map((item) => (
+              <Link key={item.href} to={'/' + item.href}>
               <a
-                key={item.href}
-                href={item.href}
                 className={`
                   px-4 py-2.5 rounded-xl text-sm lg:text-base font-medium transition-all duration-300
                   ${item.isCta 
-                    ? 'bg-indigo-600 text-white hover:bg-indigo-700 hover:shadow-md hover:shadow-indigo-300/30 transform hover:-translate-y-0.5' 
-                    : 'text-gray-700 hover:text-indigo-600 hover:bg-indigo-50'
+                    ? 'bg-indigo-600 text-white hover:bg-indigo-700 hover:shadow-md hover:shadow-indigo-300/30 transform hover:-translate-y-0.5 font-bold' 
+                    : 'text-blue-900 hover:text-indigo-600 hover:bg-indigo-50 font-bold'
                   }
                 `}
               >
                 {item.label}
               </a>
+              </Link>
             ))}
           </nav>
 

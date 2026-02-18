@@ -141,7 +141,7 @@ export default function Contact() {
                   <a
                     href="mailto:hello@amayamarketing.com"
                     className="
-                      text-2xl lg:text-3xl font-medium text-indigo-700 
+                      text-2xl font-medium text-indigo-700 
                       hover:text-indigo-800 transition-colors duration-300
                       group-hover:underline underline-offset-8 decoration-indigo-400/40
                     "

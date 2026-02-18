@@ -30,80 +30,86 @@ export default function WhyUs() {
       {/* ============================================= */}
       {/*                HERO SECTION                  */}
       {/* ============================================= */}
-      <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background image with subtle movement */}
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3"
-            alt="Modern creative workspace – marketing agency vibe"
-            className="w-full h-full object-cover scale-105 brightness-[0.82] contrast-[1.05]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/75" />
-        </div>
+<section className="
+  relative min-h-[90vh] md:min-h-screen 
+  flex items-center justify-center 
+  overflow-hidden 
+  px-6 sm:px-8 lg:px-12 xl:px-16    /* ← added: left & right padding */
+  pb-16 md:pb-24 lg:pb-32           /* ← added: bottom padding */
+">
+  {/* Background */}
+  <div className="absolute inset-0">
+    <div className="w-full h-full bg-gradient-to-br from-gray-100 via-white to-gray-50" />
+    <div className="absolute inset-0 bg-gradient-to-t from-gray-200/30 via-transparent to-gray-100/10" />
+  </div>
 
-        {/* Main content – centered, floating feel */}
-        <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 text-center text-white">
-          {/* Very large headline */}
-          <h1 className="
-            text-5xl sm:text-6xl md:text-7xl lg:text-8xl 
-            font-black tracking-tight leading-none mb-6 md:mb-10
-            drop-shadow-2xl
-          ">
-            <span className="block">Most agencies</span>
-            <span className="
-              bg-gradient-to-r from-indigo-400 via-purple-400 to-violet-400 
-              bg-clip-text text-transparent
-            ">
-              deliver posts.
-            </span>
-          </h1>
+  {/* Main content – centered, floating feel */}
+  <div className="
+    relative z-10 
+    w-full                         /* ← ensures it respects section padding */
+    max-w-6xl mx-auto              /* ← keeps content from going too wide */
+    text-center text-gray-900
+  ">
+    {/* Very large headline */}
+    <h1 className="
+      text-4xl sm:text-3xl md:text-5xl lg:text-6xl 
+      font-black tracking-tight leading-none mb-6 md:mb-10
+      drop-shadow-2xl
+    ">
+      <span className="block">Most agencies</span>
+      <span className="
+        text-indigo-600
+      ">
+        deliver posts.
+      </span>
+    </h1>
 
-          {/* Powerful subheadline */}
-          <p className="
-            text-2xl sm:text-3xl md:text-4xl lg:text-5xl 
-            font-bold tracking-tight mb-12 md:mb-16
-            text-white/95 drop-shadow-lg
-          ">
-            We deliver <span className="text-indigo-300">growth.</span>
+    {/* Powerful subheadline */}
+    <p className="
+      text-3xl sm:text-4xl md:text-6xl lg:text-7xl 
+      font-bold tracking-tight mb-12 md:mb-16
+      text-gray-800 drop-shadow-lg
+    ">
+      We deliver <span className=" bg-gradient-to-r from-indigo-600 via-purple-600 to-violet-600 
+        bg-clip-text text-transparent">growth.</span>
+    </p>
+
+    {/* Floating challenge cards */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 lg:gap-9 max-w-5xl mx-auto">
+      {challenges.map((item, index) => (
+        <div
+          key={index}
+          className="
+            group relative bg-white/80 backdrop-blur-xl 
+            border border-gray-200/50 rounded-2xl shadow-2xl -translate-y-2
+            px-6 py-7 md:px-8 md:py-9 
+            transition-all duration-400 
+            hover:bg-indigo-50/80  hover:-translate-y-3
+          "
+        >
+          <div className="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-sm font-bold text-white backdrop-blur-sm border border-indigo-300/30">
+            {index + 1}
+          </div>
+
+          <p className="text-lg md:text-xl font-medium leading-tight text-gray-900">
+            {item.problem}
           </p>
-
-          {/* Floating challenge cards – glassmorphism style */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 lg:gap-9 max-w-5xl mx-auto">
-            {challenges.map((item, index) => (
-              <div
-                key={index}
-                className="
-                  group relative bg-white/10 backdrop-blur-xl 
-                  border border-white/15 rounded-2xl 
-                  px-6 py-7 md:px-8 md:py-9 
-                  transition-all duration-400 
-                  hover:bg-white/20 hover:border-white/25 
-                  hover:shadow-2xl hover:-translate-y-2
-                "
-              >
-                <div className="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-indigo-500/20 flex items-center justify-center text-sm font-bold text-white/90 backdrop-blur-sm border border-white/20">
-                  {index + 1}
-                </div>
-
-                <p className="text-lg md:text-xl font-medium leading-tight">
-                  {item.problem}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          {/* Bridge statement – large & centered */}
-          <div className="mt-16 md:mt-24">
-            <p className="
-              text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
-              font-extrabold tracking-tight text-white
-              drop-shadow-2xl
-            ">
-              We solve <span className="text-indigo-300">all</span> of them.
-            </p>
-          </div>
         </div>
-      </section>
+      ))}
+    </div>
+
+    {/* Bridge statement */}
+    <div className="mt-16 md:mt-24">
+      <p className="
+        text-4xl sm:text-5xl md:text-6xl lg:text-7xl 
+        font-extrabold tracking-tight text-gray-900 
+        drop-shadow-2xl
+      ">
+        We solve <span className="text-indigo-600">all</span> of them.
+      </p>
+    </div>
+  </div>
+</section>
 
       {/* ============================================= */}
       {/*             HOW WE SOLVE – CARDS             */}

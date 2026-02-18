@@ -43,43 +43,43 @@ export default function Services() {
           </div>
 
           {/* Content */}
-          <div className="relative z-10 p-10 lg:p-16 flex flex-col h-full justify-center text-gray-900">
-            <div className="absolute -left-8 -top-10 text-[10rem] lg:text-[14rem] font-black text-indigo-100 select-none pointer-events-none hidden lg:block tracking-tighter leading-none">
-              01
-            </div>
+          <div className="relative z-10 p-10 lg:p-16 flex flex-col h-full justify-center text-white bg-gradient-to-br from-indigo-950 via-violet-950 to-purple-950">
+  <div className="absolute -left-8 -top-10 text-[10rem] lg:text-[14rem] font-black text-indigo-900/30 select-none pointer-events-none hidden lg:block tracking-tighter leading-none">
+    01
+  </div>
 
-            <blockquote className="relative">
-              <p className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
-                “Your brand deserves more than just posts.<br className="hidden sm:block" />
-                It deserves{" "}
-                <span className="bg-gradient-to-r from-indigo-600 via-indigo-500 to-violet-600 bg-clip-text text-transparent">
-                  strategy.
-                </span>”
-              </p>
-              <footer className="mt-8 text-2xl font-medium text-gray-600 tracking-wide">
-                — Amaya Marketing Team
-              </footer>
-            </blockquote>
+  <blockquote className="relative">
+    <p className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+      “Your brand deserves more than just posts.<br className="hidden sm:block" />
+      It deserves{" "}
+      <span className="bg-gradient-to-r from-indigo-400 via-indigo-300 to-violet-400 bg-clip-text text-transparent">
+        strategy.
+      </span>”
+    </p>
+    <footer className="mt-8 text-2xl font-medium text-indigo-200 tracking-wide">
+      — Amaya Marketing Team
+    </footer>
+  </blockquote>
 
-            <div className="mt-12 lg:mt-16">
-              <button
-                className="
-                  group relative inline-flex items-center gap-3 px-10 py-6
-                  bg-indigo-600 hover:bg-indigo-700
-                  text-white font-semibold text-xl rounded-2xl
-                  shadow-lg hover:shadow-xl hover:shadow-indigo-300/30
-                  transform hover:-translate-y-1 transition-all duration-300
-                "
-              >
-                <span className="flex items-center gap-3">
-                  Start Growing Today
-                  <svg className="w-7 h-7 group-hover:rotate-12 group-hover:scale-110 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </span>
-              </button>
-            </div>
-          </div>
+  <div className="mt-12 lg:mt-16">
+    <button
+      className="
+        group relative inline-flex items-center gap-3 px-10 py-6
+        bg-white hover:bg-gray-100
+        text-indigo-950 font-semibold text-xl rounded-2xl
+        shadow-xl hover:shadow-2xl hover:shadow-indigo-500/20
+        transform hover:-translate-y-1 transition-all duration-300
+      "
+    >
+      <span className="flex items-center gap-3">
+        Start Growing Today
+        <svg className="w-7 h-7 group-hover:rotate-12 group-hover:scale-110 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
         </div>
 
         {/* Right side - Services intro + cards */}
