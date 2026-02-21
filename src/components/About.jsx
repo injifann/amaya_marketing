@@ -3,7 +3,7 @@ import founderImage from '../assets/Founder.png'; // ← Replace with actual fou
 
 export default function About() {
   return (
-    <section className="about-section bg-white text-gray-900 min-h-screen py-20 lg:py-32">
+    <section className="about-section bg-white text-gray-900 min-h-screen py-10 lg:py-15">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-20 lg:space-y-32">
 
         {/* Hero / Intro */}
@@ -118,8 +118,8 @@ export default function About() {
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Bole Sub-City<br />
                   Addis Ababa, Ethiopia<br /><br />
-                  Email: <a href="mailto:hello@amayamarketing.com" className="text-indigo-600 hover:text-indigo-800 transition-colors">hello@amayamarketing.com</a><br />
-                  Phone: <a href="tel:+251911234567" className="text-indigo-600 hover:text-indigo-800 transition-colors">+251 9XX XXX XXX</a>
+                  Email: <a href="mailto:hello@amayamarketing.com" className="text-indigo-600 hover:text-indigo-800 transition-colors">amayamarketing@gmail.com</a><br />
+                  Phone: <a href="tel:+251955159947" className="text-indigo-600 hover:text-indigo-800 transition-colors">+251955159947</a>
                 </p>
               </div>
 

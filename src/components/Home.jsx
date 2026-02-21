@@ -34,8 +34,8 @@ export default function Home() {
       <section className="relative min-h-[90vh] md:min-h-screen flex flex-col md:flex-row overflow-hidden">
         {/* Left - Text content */}
         <div className="
-          flex-1 flex items-center justify-center md:justify-start 
-          relative z-10 px-6 py-16 md:py-0 md:px-12 lg:px-20
+          flex-1 flex justify-center md:justify-start 
+          relative z-10 px-6 py-5 md:px-12 py-8 lg:px-20 py-10
         ">
           <div className="max-w-xl lg:max-w-3xl space-y-8 md:space-y-12 text-center md:text-left">
             <h1 className="
@@ -204,8 +204,8 @@ export default function Home() {
             </div>
 
             <div className="mt-10 text-center">
+              <Link to ="work">
               <a
-                href="/work"
                 className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-800 font-medium text-lg transition-colors"
               >
                 See All Our Work
@@ -213,6 +213,8 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                 </svg>
               </a>
+              </Link>
+
             </div>
           </div>
         </div>

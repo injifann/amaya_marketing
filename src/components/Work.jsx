@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 const projects = [
   {
     id: 1,
     title: "Ethio Coffee – From Local Shop to National Brand",
     description:
       "Grew online orders 312% in 5 months with targeted Facebook + Instagram ads, Amharic content, and TikTok challenges.",
-    image: "https://images.unsplash.com/photo-1559051668-9024c9b5e10e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    logo: "/logos/ethio-coffee.png", // replace with real path
+    image: "https://image/",
+    logo: "/logos/ethio-coffee.png", 
     badge: "+312% Sales",
     tags: ["Social Media", "Content Creation", "eCommerce"],
     link: "/work/ethio-coffee",
@@ -16,7 +17,7 @@ const projects = [
     title: "Addis Homes – Real Estate Lead Machine",
     description:
       "Turned 38 monthly leads into 197 with Google Search + Display ads + retargeting in Addis Ababa & surrounding areas.",
-    image: "https://images.unsplash.com/photo-1580587771525-78b9e3b2f39e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: "https://images",
     logo: "/logos/addis-homes.png",
     badge: "+418% Leads",
     tags: ["Google Ads", "PPC", "Local Services"],
@@ -27,13 +28,12 @@ const projects = [
     title: "Hawassa Fashion – SEO & Brand Glow-Up",
     description:
       "Organic traffic up 245% + first-page rankings for key Amharic fashion keywords in under 8 months.",
-    image: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: "https://images",
     logo: "/logos/hawassa-fashion.png",
     badge: "+245% Traffic",
     tags: ["SEO", "Branding", "Content"],
     link: "/work/hawassa-fashion",
   },
-  // Add 3–9 more real projects here...
 ];
 
 const OurWork = () => {
@@ -50,18 +50,13 @@ const OurWork = () => {
             +285% lead growth and +4.1× ROI across 60+ campaigns.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
+            <Link to ="/contact">
             <a
-              href="#contact"
-              className="bg-white text-indigo-900 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition"
-            >
-              Get Your Free Audit
-            </a>
-            <a
-              href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-indigo-900 transition"
             >
               Let's Talk Growth
             </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -186,12 +181,13 @@ const OurWork = () => {
             Whether you're in Addis Ababa, regional Ethiopia, or expanding
             abroad — let's build your next growth story.
           </p>
-          <a
-            href="/contact"
-            className="bg-indigo-600 text-white px-10 py-5 rounded-lg font-bold text-lg hover:bg-indigo-700 transition inline-block"
-          >
-            Book Free Strategy Call
-          </a>
+          <Link to ="contact">
+            <a
+              className="bg-indigo-600 text-white px-10 py-5 rounded-lg font-bold text-lg hover:bg-indigo-700 transition inline-block"
+            >
+              Book Free Strategy Call
+            </a>
+          </Link>
         </div>
       </section>
     </div>

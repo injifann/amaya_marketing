@@ -6,14 +6,12 @@ export default {
   ],
   theme: {
     extend: {
-      // Your existing custom colors
       colors: {
         primary: '#007BFF',     
         secondary: '#FF6B35',   
         dark: '#0F172A',
       },
 
-      // Your existing font setup
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
@@ -22,7 +20,6 @@ export default {
       // Animations used in the hero background + others
       // ───────────────────────────────────────────────
       keyframes: {
-        // Your existing grow animation
         grow: {
           '0%': { height: '0px', opacity: '0' },
           '100%': { height: '3rem', opacity: '1' },
@@ -41,13 +38,11 @@ export default {
           '50%': { backgroundPosition: '100% 50%' },
         },
 
-        // Optional: soft fade-in for text/content
         fadeInUp: {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
 
-        // Optional: gentle pulse for CTAs or highlights
         pulseSoft: {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.85' },
@@ -55,34 +50,29 @@ export default {
       },
 
       animation: {
-        // Your existing one
         grow: 'grow 0.6s ease-out forwards',
 
         // Hero background movement
         'slow-pan': 'slowPan 40s linear infinite',
         'gradient-shift': 'gradientShift 18s ease infinite',
 
-        // Useful helpers you can apply with animate-fadeInUp etc.
         'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
         'fade-in-up-slow': 'fadeInUp 1.2s ease-out forwards',
         'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
       },
 
-      // Extra spacing / sizing helpers (common in hero sections)
       spacing: {
         '18': '4.5rem',
         '22': '5.5rem',
         '128': '32rem',
       },
 
-      // Bigger text sizes for hero headlines
       fontSize: {
         '7xl': ['5rem', { lineHeight: '1.05' }],
         '8xl': ['6rem', { lineHeight: '1' }],
         '9xl': ['7.5rem', { lineHeight: '1' }],
       },
 
-      // Make 200% background size available for animations
       backgroundSize: {
         '200%': '200% 200%',
         '300%': '300% 300%',
@@ -95,5 +85,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')]
 }

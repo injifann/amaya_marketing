@@ -5,16 +5,15 @@ import Footer from './Footer';
 import { useEffect } from 'react';
 
 export default function Layout() {
-  const location = useLocation();  // ← added (was missing in your snippet)
+  const location = useLocation();  
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' }); // 'instant' = no visible jump
   }, [location.pathname]);
-  // Short, clearly named variants — modern convention
   const pageVariants = {
     initial: {
       opacity: 0,
-      y: 30,           // start slightly below
+      y: 30,           
     },
     animate: {
       opacity: 1,
@@ -26,7 +25,7 @@ export default function Layout() {
     },
     exit: {
       opacity: 0,
-      y: -20,          // slide up when leaving
+      y: -20,         
       transition: {
         duration: 0.5,
         ease: "easeIn",
@@ -45,7 +44,6 @@ export default function Layout() {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="pt-4 md:pt-8"
           >
             <Outlet />
           </motion.div>

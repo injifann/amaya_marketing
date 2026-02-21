@@ -6,12 +6,11 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { label: 'Home', href: '' },
     { label: 'Services', href: 'services' },
     { label: 'Work', href: 'work' },
-    { label: 'Why Us', href: 'why-us' },
+    { label: 'WhyUs', href: 'why-us' },
     { label: 'About', href: 'about' },
-    { label: 'Insights', href: 'blog' },
+    { label: 'Articles', href: 'blog' },
     { 
       label: 'Let’s Talk', 
       href: 'contact',
@@ -87,7 +86,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-0.5 lg:gap-3">
+          <nav className="hidden md:flex items-center lg:gap-3">
             {navItems.map((item) => (
               <Link key={item.href} to={'/' + item.href}>
                 <div
@@ -95,8 +94,8 @@ export default function Header() {
                     px-3 py-2.5 rounded-xl text-sm lg:text-base font-medium 
                     transition-all duration-300 cursor-pointer
                     ${item.isCta 
-                      ? 'bg-indigo-600 text-white hover:bg-indigo-700 hover:shadow-md hover:shadow-indigo-300/30 transform hover:-translate-y-0.5 font-bold' 
-                      : 'text-blue-900 hover:text-indigo-600 hover:bg-indigo-50 font-bold'
+                      ? 'bg-indigo-600 text-white hover:bg-indigo-700 hover:shadow-md hover:shadow-indigo-300/30 transform hover:-translate-y-0.5 font-bold md:text-sm' 
+                      : 'text-blue-900 hover:text-indigo-600 hover:bg-indigo-50 font-bold md:text-sm'
                     }
                   `}
                 >

@@ -1,5 +1,6 @@
 // Services.jsx
 import ServiceCard from "../cards/ServiceCards";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -26,7 +27,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="services-section bg-gray-50 min-h-screen py-20 lg:py-32">
+    <section className="services-section bg-gray-50 min-h-screen py-10 lg:py-20">
       <div className="services-container max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
 
         {/* Left side - Hero Quote / Visual Statement */}
@@ -72,7 +73,9 @@ export default function Services() {
       "
     >
       <span className="flex items-center gap-3">
+        <Link to="/contact">
         Start Growing Today
+        </Link>
         <svg className="w-7 h-7 group-hover:rotate-12 group-hover:scale-110 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
         </svg>

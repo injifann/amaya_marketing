@@ -9,6 +9,8 @@ import Contact  from './components/Contact'
 import OurWork from './components/Work'
 import Layout from './components/Layout'
 import WhyUs from './components/Whyus'
+import Blog from './components/Blog'
+import BlogPostPage from './components/BlogPostPage.jsx'
 import {Routes,Route} from 'react-router-dom'
 
 function App() {
@@ -34,6 +36,10 @@ function App() {
         <Route path='why-us' element={<WhyUs/>}/>
         <Route path='about' element={<About/>}/>
         <Route path='contact' element={<Contact/>}/>
+        <Route path='blog' element={<Blog/>}/>
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
+
+
 
       </Route>
     </Routes>
